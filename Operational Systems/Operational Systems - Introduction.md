@@ -1,3 +1,4 @@
+# Operational Systems - Introduction
 #### ***Notes by: Samuel Couto***
 #### ***Reference Book: "Sistemas Operacionais: Conceitos e Mecanismos" - Carlos A. Maziero***
 ---
@@ -21,6 +22,13 @@ Looking to this image will make us understand the OS as an management key point.
 In this way, the OS will make a bridge between programs and the hardware fulfilling all the necessities (requests) presented by the programs, always managing the hardware consumption.
 
 The resource management, as said before, needs to equalize the hardware requests to avoid not only collisions, but overflows and denial of services (DoS) too.
+
+As an example of equalization, we have distribution of tasks for all the processor's cores.
+
+- A lot of programs makes requests at the same time
+- The OS will detect those requests
+- Distribute those requests to different cores of the processor
+- The processor processes those requests respecting the priorities defined by the user
 
 > ***Abstraction***
 > The abstraction is necessary in order to promote simple access to low level hardware interfaces, making the process of using the hardware in the correct way easier to the programs *(like a step to step algorithm)*.
