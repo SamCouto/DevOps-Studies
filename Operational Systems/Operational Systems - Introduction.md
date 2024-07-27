@@ -1,4 +1,5 @@
 # Operational Systems - Introduction
+## *Basic concepts on Operational Systems*
 #### ***Notes by: Samuel Couto***
 #### ***Reference Book: "Sistemas Operacionais: Conceitos e Mecanismos" - Carlos A. Maziero***
 ---
@@ -15,13 +16,24 @@ Here's one graphical example of the communication between the *OS*, *Hardware* a
 ![[OS_Interaction.png]]
 Looking to this image will make us understand the OS as an management key point.
 
-> ***Resource Management***
-> The OS will manage all the software's hardware requests and all the computer's hardware.
-> This management process aims to equalize the requests in order to avoid collisions.
+---
+
+### ***Abstraction***
+
+The abstraction is necessary in order to promote simple access to low level hardware interfaces, making the process of using the hardware easier to the programs *(like a step to step algorithm)*.
+
+In fact, the abstraction objective it's to turn apps independent of the hardware, with this, both can be more autonomous, making the development of apps easier because the developer don't need to specify really low level requests to make the program works.
+
+---
+
+### ***Resource Management***
+
+The OS will manage all the software's hardware requests and all the computer's hardware.
+This management process aims to equalize the requests in order to avoid request collisions.
 
 In this way, the OS will make a bridge between programs and the hardware fulfilling all the necessities (requests) presented by the programs, always managing the hardware consumption.
 
-The resource management, as said before, needs to equalize the hardware requests to avoid not only collisions, but overflows and denial of services (DoS) too.
+The resource management equalizes the hardware requests defining policies of hardware usage in order to resolve processing conflicts, sharing the processing throughout the CPU cores.
 
 As an example of equalization, we have distribution of tasks for all the processor's cores.
 
@@ -30,5 +42,13 @@ As an example of equalization, we have distribution of tasks for all the process
 - Distribute those requests to different cores of the processor
 - The processor processes those requests respecting the priorities defined by the user
 
-> ***Abstraction***
-> The abstraction is necessary in order to promote simple access to low level hardware interfaces, making the process of using the hardware in the correct way easier to the programs *(like a step to step algorithm)*.
+![[Resource_Management.png]]
+
+The same happens to the RAM that also needs to be distributed to the programs, preventing one program to interfere in other programs requests (processes).
+
+This management will prevent a lot of processing overflows an memory overflows, avoiding that one process takeover the hole CPU.
+
+> ***Printers (Print Jobs)***
+> Printing processes needs to be resolved in a exclusive way - just one process per time.
+> The OS creates a print job line in order to prevent mixing documents in the process of printing.
+
